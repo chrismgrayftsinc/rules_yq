@@ -1,0 +1,7 @@
+module(name = "rules_yq", version="0.0.0")
+
+bazel_dep(name = "stardoc", version = "0.5.0", repo_name = "io_bazel_stardoc")
+
+ext = use_extension("@rules_yq//:extensions.bzl", "ext")
+use_repo(ext, "yq_toolchains")
+register_toolchains("@yq_toolchains//:all")
