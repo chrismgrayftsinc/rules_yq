@@ -1,5 +1,6 @@
-module(name = "rules_yq", version="0.0.0")
+module(name = "rules_yq", version="0.1.0")
 
+# NOTE: stardoc is currently broken with bzlmod.
 bazel_dep(name = "stardoc", version = "0.5.0", repo_name = "io_bazel_stardoc")
 
 ext = use_extension("@rules_yq//:extensions.bzl", "ext")
