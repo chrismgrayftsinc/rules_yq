@@ -220,7 +220,7 @@ def _yq_bindist_toolchain_impl(ctx):
         executable = False,
         content = """
 toolchain(
-    name = "{os}_toolchain",
+    name = "toolchain",
     toolchain_type = "@rules_yq//yq:toolchain",
     toolchain = "@{bindist_name}//:{os}_info",
     exec_compatible_with = {exec_constraints},
